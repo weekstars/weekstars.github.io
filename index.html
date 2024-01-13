@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>Azmuth&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Azmuth&#039;s blog"><meta name="msapplication-TileImage" content="/img/favicon.svg"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Azmuth&#039;s blog"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta property="og:type" content="blog"><meta property="og:title" content="Azmuth&#039;s blog"><meta property="og:url" content="http://example.com/"><meta property="og:site_name" content="Azmuth&#039;s blog"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="http://example.com/img/og_image.png"><meta property="article:author" content="Azmuth"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="http://example.com/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com"},"headline":"Azmuth's blog","image":["http://example.com/img/og_image.png"],"author":{"@type":"Person","name":"Azmuth"},"publisher":{"@type":"Organization","name":"Azmuth's blog","logo":{"@type":"ImageObject","url":"http://example.com/img/logo.svg"}},"description":""}</script><link rel="icon" href="/img/favicon.svg"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.svg" alt="Azmuth&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item is-active" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-12-14T01:50:26.723Z" title="2023/12/14 09:50:26">2023-12-14</time>发表</span><span class="level-item"><time dateTime="2023-12-10T07:00:11.656Z" title="2023/12/10 15:00:11">2023-12-10</time>更新</span><span class="level-item">18 分钟读完 (大约2676个字)</span></div></div><div class="content"><h2 id="伊辛模型的自对偶性质">伊辛模型的自对偶性质</h2>
+<p><u>211850002 江啟诚</u></p>
+<p><em>伊辛模型在统计物理中具有重要地位，也具有有趣的数学性质，比如二维伊辛模型具有自对偶性质（self-dual）。请进行相关调研，通过对配分函数的高温与低温展开，建立二维正方晶格及六角晶格中的自对偶关系，并以此精确确定二维伊辛模型的相变临界温度；请问三维伊辛模型是否具有self-dual性质？能否猜测出一个可能的和三维伊辛模型对偶的理论？</em></p>
+<p>系统的零场配分函数为 <span class="math display">\[
+Q(N, T)=\sum_{\left\{\sigma_{i}\right\}} \prod_{\text {n.n. }}
+\mathrm{e}^{K \sigma_{i} \sigma_{j}} \quad(K=J / k T)
+\]</span></p>
+<h4 id="高温展开">高温展开</h4>
+<p>由于乘积<span class="math inline">\((\sigma_{i}
+\sigma_{j})\)</span>只能为<span class="math inline">\(\pm 1\)</span>
+<span class="math display">\[
+\mathrm{e}^{K \sigma_{i} \sigma_{j}}=\cosh K+\sigma_{i} \sigma_{j} \sinh
+K=\cosh K\left(1+\sigma_{i} \sigma_{j} v\right), \quad v=\tanh K
+\]</span></p>
+<p>于是对所有近邻对的乘积为可以写为 <span class="math display">\[
+\prod_{\text {n.n. }} \mathrm{e}^{K \sigma_{i} \sigma_{j}}=(\cosh
+K)^{\mathscr{N}} \prod_{\text {n.n. }}\left(1+\sigma_{i} \sigma_{j}
+v\right)
+\]</span> 其中<span
+class="math inline">\(\mathscr{N}\)</span>表示晶格上近邻对的总数目。对于取周期性边界条件的晶格，<span
+class="math inline">\(\mathscr{N}=\frac{1}{2}qN\)</span>，其中<span
+class="math inline">\(q\)</span>是配位数。</p>
+<p>配分函数可以写为 <span class="math display">\[
+\left.\begin{array}{rl}
+Q(N, T)= &amp; (\cosh K)^{\mathscr{N}} \sum_{\sigma_{1}= \pm 1} \cdots
+\sum_{\sigma_{N}= \pm 1} \\
+&amp; {\left[1+v \sum_{(i, j)} \sigma_{i} \sigma_{j}+v^{2}
+\sum_{\substack{(i, j)(k, l) \\
+(i, j) \neq(k, l)}} \sigma_{i} \sigma_{j} \sigma_{k}
+\sigma_{l}+\cdots\right]}
+\end{array}\right.
+\]</span> 我们将上式中每一对<span class="math inline">\((\sigma_{i}
+\sigma_{j})\)</span>在晶格中用连接格点<span
+class="math inline">\(i\)</span>,<span
+class="math inline">\(j\)</span>的键表示，记键的个数为<span
+class="math inline">\(r\)</span>。通过观察可以发现，如果这些键不构成首尾相接，那么对自旋<span
+class="math inline">\(\pm
+1\)</span>求和为0，因为总可以找到在求和中只出现一次的某个<span
+class="math inline">\(\sigma_i\)</span>。例如<span
+class="math inline">\(r=1,2,3\)</span>均无贡献，<span
+class="math inline">\(r=4\)</span>时只有<span
+class="math inline">\(\left(\sigma_{i} \sigma_{j} \sigma_{j} \sigma_{k}
+\sigma_{k} \sigma_{l} \sigma_{l} \sigma_{i}\right) \equiv
+1\)</span>这些项有贡献，而每一项的贡献均为<span
+class="math inline">\(2^N\)</span>。</p>
+<p><img src="C:\Users\江啟诚\AppData\Roaming\Typora\typora-user-images\image-20231209151449432.png" alt="image-20231209151449432" style="zoom:67%;" /></p>
+<p><img src="C:\Users\江啟诚\AppData\Roaming\Typora\typora-user-images\image-20231209151505913.png" alt="image-20231209151505913" style="zoom:67%;" /></p>
+<p>所以配分函数可以进一步改写为 <span class="math display">\[
+Q(N, T)=2^{N}(\cosh K)^{\mathscr{N}} \sum_{r} n(r) v^{r} \quad[n(0)=1]
+\]</span> 其中<span
+class="math inline">\(n(r)\)</span>代表在给定晶格上用<span
+class="math inline">\(r\)</span>个键能够画出的封闭图形数目。</p>
+<p>由于<span class="math inline">\(v=\tanh (J / k
+T)\)</span>，高温下<span
+class="math inline">\(v\)</span>是小量，所以将以上展开称之为高温展开。</p>
+<h4 id="低温展开">低温展开</h4>
+<p>将哈密顿量用晶格中反向近邻对<span
+class="math inline">\(N_{+-}\)</span>表示 <span class="math display">\[
+H\left(N_{+-}\right)=-J\left(N_{++}+N_{--}-N_{+-}\right)=-J\left(\mathscr{N}-2
+N_{+-}\right)
+\]</span>
+基态下系统自旋指向同一方向，以此为出发点逐步反转自旋，可以将配分函数表示为
+<span class="math display">\[
+Q(N, T)=\mathrm{e}^{K \mathscr{N}} \sum_{r} m(r) \mathrm{e}^{-2 K r}
+\quad[m(0)=1]
+\]</span> 其中<span class="math inline">\(m(r)\)</span>表示晶格中有<span
+class="math inline">\(r\)</span>个反向近邻对的状态数目，显然在<span
+class="math inline">\(r=0\)</span>后的下一个非零项为<span
+class="math inline">\(r=q\)</span>。</p>
+<p><span
+class="math inline">\(m(r)\)</span>也可以通过图形来表示，展开中的每一项都与一个封闭图形相联系，这个图形把上自旋区域和下自旋区域分开，图形的边界长度等于反向近邻对的数目。</p>
+<p><img src="C:\Users\江啟诚\AppData\Roaming\Typora\typora-user-images\image-20231209154355932.png" alt="image-20231209154355932" style="zoom:67%;" /></p>
+<p>由于<span class="math inline">\(K=J / k T\)</span>,低温下<span
+class="math inline">\(\mathrm{e}^{-2
+K}\)</span>是小量，所以将以上展开称之为低温展开。</p>
+<h4 id="对偶变换">对偶变换</h4>
+<p>对晶格的所有键作垂直平分线，它们的所有交点即为对偶晶格的格点，例如正方晶格<span
+class="math inline">\((q=4)\)</span>的对偶晶格还是正方晶格，三角晶格<span
+class="math inline">\((q=6)\)</span>的对偶晶格是六角晶格<span
+class="math inline">\((q=3)\)</span>，反之亦然。</p>
+<p>在一个晶格上键数为<span
+class="math inline">\(r\)</span>的的封闭图形对应其对偶晶格上具有<span
+class="math inline">\(r\)</span>个反向近邻对对应的封闭图形，反之，在一个晶格上具有<span
+class="math inline">\(r\)</span>个反向近邻对的对应的封闭图形对应其对偶晶格上键数为<span
+class="math inline">\(r\)</span>的的封闭图形。</p>
+<p><img src="C:\Users\江啟诚\AppData\Roaming\Typora\typora-user-images\image-20231209160205664.png" alt="image-20231209160205664" style="zoom:67%;" /></p>
+<p>于是有 <span class="math display">\[
+n(r)=m_{D}(r) ， m(r)=n_{D}(r) \
+\]</span> 其中下标<span
+class="math inline">\(D\)</span>表示对偶晶格。</p>
+<p>考虑温度为<span
+class="math inline">\(T\)</span>的原晶格，引入另一个温度变量<span
+class="math inline">\(K^{*}=J / k T^{*}\)</span>使得<span
+class="math inline">\(\tanh K^{*}=\mathrm{e}^{-2
+K}\)</span>，将低温展开的配分函数改写为 <span class="math display">\[
+Q(N, T)=\mathrm{e}^{K \mathscr{N}} \sum_{r} n_{D}(r) v^{* r}, \quad
+v^{*}=\tanh K^{*}
+\]</span> 考虑温度为<span
+class="math inline">\(T^{*}\)</span>的对偶晶格，高温展开的配分函数写为
+<span class="math display">\[
+Q_{D}\left(N_{D}, T^{*}\right)=2^{N_{D}}\left(\cosh
+K^{*}\right)^{\mathcal{N}} \sum_{r} n_{D}(r) v^{* r}
+\]</span> 其中<span class="math inline">\(N_{D}=q N /
+q_{D}\)</span>，将上面二式联立，有 <span class="math display">\[
+Q(N, T)=2^{-N_{D}}\left(\sinh K^{*} \cosh K^{*}\right)^{-\mathscr{N} /
+2} Q_{D}\left(N_{D}, T^{*}\right)
+\]</span> 它将温度为<span
+class="math inline">\(T\)</span>的给定晶格和温度为<span
+class="math inline">\(T^{*}\)</span>的对偶晶格的配分函数联系起来，这就是所谓的对偶变换。</p>
+<h4 id="正方晶格的临界温度">正方晶格的临界温度</h4>
+<p>对于正方晶格，有 <span class="math display">\[
+Q(N, T)=\left[\sinh \left(2 K^{*}\right)\right]^{-N} Q\left(N,
+T^{*}\right)
+\]</span> 或者写为 <span class="math display">\[
+[\sinh (2 K)]^{-N / 2} Q(N, T)=\left[\sinh \left(2
+K^{*}\right)\right]^{-N / 2} Q\left(N, T^{*}\right)
+\]</span> 如果配分函数在某个温度<span
+class="math inline">\(T_c\)</span>存在奇点，相应的<span
+class="math inline">\(T_c^{*}\)</span>也必然存在奇点，而假如只存在一个奇点（可以证明只存在一个奇点），那么必然有<span
+class="math inline">\(T=T_c\)</span>，正方晶格的临界温度由下式给出 <span
+class="math display">\[
+\sinh \left(2 K_{\mathrm{c}}\right)=1
+\]</span> 解得 <span class="math display">\[
+K_c\approx 0.4407
+\]</span>
+对于六角晶格，由于其不是自对偶的，需要通过星型--三角变换将三角晶格的高温模型和六角晶格的高温模型联系起来，再结合对偶晶格将同一晶格的高温模型和低温模型联系起来，从而得到临界温度。</p>
+<p><img src="C:\Users\江啟诚\AppData\Roaming\Typora\typora-user-images\image-20231209164548423.png" alt="image-20231209164548423" style="zoom:67%;" /></p>
+<h4 id="星型--三角变换">星型--三角变换</h4>
+<p><img src="C:\Users\江啟诚\AppData\Roaming\Typora\typora-user-images\image-20231209192546814.png" alt="image-20231209192546814" style="zoom:67%;" /></p>
+<p>对于六角晶格，其配分函数可以写为 <span class="math display">\[
+Z_{N}^{H}\{L\}=\sum_{\sigma} \exp \left[L_{1} \sum \sigma_{i}
+\sigma_{l}+L_{2} \sum \sigma_{j} \sigma_{l}+L_{3} \sum \sigma_{k}
+\sigma_{l}\right]
+\]</span> 简单起见，考虑各向同性的相互作用，令<span
+class="math inline">\(L_1=L_2=L_3=L\)</span>，有 <span
+class="math display">\[
+Z_{N}^{H}\{L\}=\sum_{\sigma} \exp \left[L(\sum \sigma_{i} \sigma_{l}+
+\sum \sigma_{j} \sigma_{l}+ \sum \sigma_{k} \sigma_{l})\right]
+\]</span> 同样，对于三角晶格，其配分函数可以写为 <span
+class="math display">\[
+Z_{N}^{T}\{K\}=\sum_{\sigma} \exp \left[K( \sum \sigma_{j} \sigma_{k}+
+\sum \sigma_{k} \sigma_{i}+ \sum \sigma_{i} \sigma_{j})\right]
+\]</span> 对于六角晶格，进一步有 <span class="math display">\[
+\exp \left[L(\sum \sigma_{i} \sigma_{l}+ \sum \sigma_{j} \sigma_{l}+
+\sum \sigma_{k} \sigma_{l})\right]=\prod_{l} W\left(\sigma_{l} \mid
+\sigma_{i}, \sigma_{j}, \sigma_{k}\right)
+\]</span> 其中 <span class="math display">\[
+W\left(\sigma_{l} \mid \sigma_{i}, \sigma_{j}, \sigma_{k}\right)=\exp
+\left[\sigma_{l}L\left( \sigma_{i}+ \sigma_{j}+ \sigma_{k}\right)\right]
+\]</span> 其中连乘遍历六角晶格所有的B型格点<span
+class="math inline">\(l\)</span>，<span
+class="math inline">\(i,j,k\)</span>则是B型格点<span
+class="math inline">\(l\)</span>相邻的A型格点，将这种形式带回六角晶格的配分函数，并注意到可以先对<span
+class="math inline">\(\sigma_l=\pm 1\)</span>求和，得 <span
+class="math display">\[
+Z_{N}^{H}\{L\}=\sum_{\sigma_{A}} \prod_{(i, j, k)} w\left(\sigma_{i},
+\sigma_{j}, \sigma_{k}\right)
+\]</span> 其中 <span class="math display">\[
+\begin{aligned}
+w\left(\sigma_{i}, \sigma_{j}, \sigma_{k}\right) &amp;
+=\sum_{\sigma_{l}} W\left(\sigma_{l} \mid \sigma_{i}, \sigma_{j},
+\sigma_{k}\right) \\
+&amp; =2 \cosh \left[L( \sigma_{i}+\sigma_{j}+\sigma_{k}\right)]
+\end{aligned}
+\]</span> 我们断言一定存在参数<span
+class="math inline">\(R\)</span>和<span
+class="math inline">\(K\)</span>,使得 <span class="math display">\[
+w\left(\sigma_{i}, \sigma_{j}, \sigma_{k}\right)=R \exp \left[K(
+\sigma_{j} \sigma_{k}+\sigma_{k} \sigma_{i}+ \sigma_{i}
+\sigma_{j}\right)]
+\]</span>
+这个断言将在下一节中证明，将上式右侧的形式带回六角晶格的配分函数有 <span
+class="math display">\[
+Z_{N}^{H}\{L\}=R^{N / 2} \sum_{\sigma_{A}} \prod_{(i, j, k)}  \exp
+\left[K\left(\sigma_{j} \sigma_{k}+\sigma_{k} \sigma_{i}+\sigma_{i}
+\sigma_{j}\right)\right]
+\]</span> 上式右侧可以与对六角晶格(<span
+class="math inline">\(N\)</span>个格点)进行星型--三角变换后得到的三角晶格(<span
+class="math inline">\(N/2\)</span>个格点)的配分函数相联系，将<span
+class="math inline">\(N\)</span>换为<span
+class="math inline">\(2N\)</span>，上式改写为 <span
+class="math display">\[
+Z_{2 N}^{H}\{L\}=R^{N} Z_{N}^{T}\{K\}
+\]</span></p>
+<h4 id="参数r和k的确定">参数<span
+class="math inline">\(R\)</span>和<span
+class="math inline">\(K\)</span>的确定</h4>
+<p>将上一节的断言写为 <span class="math display">\[
+2 \cosh \left[L( \sigma_{i}+\sigma_{j}+\sigma_{k}\right)]=R \exp
+\left[K( \sigma_{j} \sigma_{k}+\sigma_{k} \sigma_{i}+ \sigma_{i}
+\sigma_{j}\right)]
+\]</span> 对<span class="math inline">\(\sigma_{i} \in
+\{-1,1\}\)</span>的每一种情况都成立，考虑到上式的对称性，只需满足 <span
+class="math display">\[
+\left\{\begin{matrix}
+2\cosh(3L)=R\exp(3K)
+\\
+2\cosh(L)=R\exp(-K)
+\end{matrix}\right.
+\]</span> 引入等效温度<span class="math inline">\(K= L/ k
+T^{*}\)</span>使得上式成立，则通过星型--三角变换将温度为<span
+class="math inline">\(T\)</span>的六角晶格(<span
+class="math inline">\(2N\)</span>个格点)与温度为<span
+class="math inline">\(T^{*}\)</span>的三角晶格(<span
+class="math inline">\(N\)</span>个格点)高温模型的配分函数相联系，并且可以验证当$T<span
+class="math inline">\(时，有\)</span>T^{*}$。</p>
+<h4 id="六角晶格的临界温度">六角晶格的临界温度</h4>
+<p>仿照最开始的做法，我们引入另一个温度变量<span
+class="math inline">\(K^{**}=J / k T^{**}\)</span>使得<span
+class="math inline">\(\tanh K^{**}=\mathrm{e}^{-2
+K}\)</span>，通过对偶变换将温度为<span
+class="math inline">\(T^{*}\)</span>的三角晶格(<span
+class="math inline">\(N\)</span>个格点)与温度为<span
+class="math inline">\(T^{**}\)</span>的六角晶格(<span
+class="math inline">\(2N\)</span>个格点)联系起来，有 <span
+class="math display">\[
+Z_{N}^{T}\{K\}=2^{-2N}(\sinh K^{*}\cosh
+K^{*})^{-\frac{3}{2}N}Z_{2N}^{H}\{K^*\}
+\]</span> 于是我们将温度为<span
+class="math inline">\(T\)</span>的六角晶格(<span
+class="math inline">\(2N\)</span>个格点）与温度为<span
+class="math inline">\(T^{**}\)</span>的六角晶格(<span
+class="math inline">\(2N\)</span>个格点)联系起来，有 <span
+class="math display">\[
+Z_{N}^{H}\{L\}=R^N2^{-2N}(\sinh K^{*}\cosh
+K^{*})^{-\frac{3}{2}N}Z_{2N}^{H}\{K^*\}
+\]</span> 临界温度<span
+class="math inline">\(K_c\)</span>由以下方程组确定 <span
+class="math display">\[
+\left\{\begin{matrix}
+2\cosh(3K_c)=R\exp(3K)
+\\
+2\cosh(K_c)=R\exp(-K)
+\\
+\tanh K_c=\mathrm{e}^{-2 K}
+\end{matrix}\right.
+\]</span> 解得临界温度 <span class="math display">\[
+K_{\mathrm{c}}=\frac{1}{2} \sinh ^{-1} \sqrt{3} \simeq 0.6585
+\]</span>
+<img src="C:\Users\江啟诚\AppData\Roaming\Typora\typora-user-images\image-20231209211137848.png" alt="image-20231209211137848" style="zoom:50%;" /></p>
+<h4 id="三维伊辛模型的自对偶">三维伊辛模型的自对偶</h4>
+<p>对于三维的简单立方晶格，低温展开中的每一项都与一个封闭体积相联系，这个体积把上自旋区域和下自旋区域分开，体积的边界面积等于反向近邻对的数目，高温展开中的每一项仍与一个封闭的线路所联系，显然两者并不一一对应，所以三维伊辛模型并不具有自对偶的数学性质。</p>
+<p><img src="C:\Users\江啟诚\AppData\Roaming\Typora\typora-user-images\image-20231210144645865.png" alt="image-20231210144645865" style="zoom:67%;" /></p>
+<p>要建立一个和三维伊辛模型对偶的理论，需要将一个面代替一个键来描述高温展开，在面的四条边上放置自旋<span
+class="math inline">\(\tilde{\sigma}_{i}= \pm
+1\)</span>，这样面和面通过公共边上放置的自旋粘合起来。并建立配分函数
+<span class="math display">\[
+\tilde{Z}=\sum_{\left\{\tilde{\sigma}_{P}^{i}= \pm 1\right\}}
+\prod_{\text {plaquettes } P}\left(1+\tanh \tilde{K}
+\tilde{\sigma}_{P}^{1} \tilde{\sigma}_{P}^{2} \tilde{\sigma}_{P}^{3}
+\tilde{\sigma}_{P}^{4}\right) \propto
+\sum_{\left\{\tilde{\sigma}_{i}\right\}} \mathrm{e}^{\tilde{K} \sum_{P}
+\tilde{\sigma}_{P}^{1} \tilde{\sigma}_{P}^{2} \tilde{\sigma}_{P}^{3}
+\tilde{\sigma}_{P}^{4}}
+\]</span> 这样一个配分函数描述了与三维伊辛模型对偶的系统。</p>
+<h4 id="参考资料">参考资料</h4>
+<p>1.Pathria R K. Statistical mechanics[M]. Elsevier, 2016.</p>
+<p>2.Baxter R J. Exactly solved models in statistical mechanics[M].
+Elsevier, 2016.</p>
+<p>3.Kardar M. Statistical physics of fields[M]. Cambridge University
+Press, 2007.</p>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-18T06:54:04.000Z" title="2023/7/18 14:54:04">2023-07-18</time>发表</span><span class="level-item"><time dateTime="2023-07-19T08:18:34.237Z" title="2023/7/19 16:18:34">2023-07-19</time>更新</span><span class="level-item">7 分钟读完 (大约1087个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/18/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A61-%E7%94%B5%E7%A3%81%E8%BE%90%E5%B0%84%E7%9A%84%E9%87%8F%E5%AD%90%E7%90%86%E8%AE%BA/">量子光学1 电磁辐射的量子理论</a></p><div class="content"><h2 id="经典电动力学">1.1 经典电动力学</h2>
+<p>在学习电磁辐射的量子理论之前，回顾一下经典电动力学是很有必要的。考虑无源区域的Maxwell方程组</p>
+<p><span class="math display">\[
+\left\{\begin{array}{l}
+\nabla \cdot \boldsymbol{D}=0 \\
+\nabla \times \boldsymbol{E}=-\frac{\partial \boldsymbol{B}}{\partial t}
+\\
+\nabla \cdot \boldsymbol{B}=0 \\
+\nabla \times \boldsymbol{H}=\frac{\partial \boldsymbol{D}}{\partial t}
+\\
+\end{array}\right.
+\]</span></p>
+<p>在真空中有本构关系</p>
+<p><span class="math display">\[
+\begin{aligned}
+\boldsymbol{D} &amp; =\varepsilon_{0} \boldsymbol{E} \\
+\boldsymbol{B} &amp; =\mu_{0} \boldsymbol{H}
+\end{aligned}
+\]</span> 由此可以推出 <span
+class="math inline">\(\boldsymbol{E}\)</span>和 <span
+class="math inline">\(\boldsymbol{B}\)</span>满足波动方程 <span
+class="math display">\[
+\nabla^{2} \boldsymbol{E}-\frac{1}{c^{2}} \frac{\partial^{2}
+\boldsymbol{E}}{\partial t^{2}}=0
+\]</span> 这个波动方程的解可以看作许多模式平面波的叠加，其中第<span
+class="math inline">\(l\)</span>个模式由波矢<span
+class="math inline">\(\boldsymbol{k_l}\)</span>和偏振矢量<span
+class="math inline">\(\boldsymbol{\epsilon_l}\)</span>共同确定，即 <span
+class="math display">\[
+\boldsymbol{E}(\boldsymbol{r},t)=\sum_l \boldsymbol{\epsilon_l}
+\mathscr{E}_l(t)e^{i\boldsymbol{k_l}\cdot\boldsymbol{r}}+c.c
+\]</span> 其中<span
+class="math inline">\(\mathscr{E}_l(t)=\mathscr{E}_l(0)e^{-i\omega_l
+t}\)</span>被称为场的动力学状态(dynamics
+state)，它和它的复共轭（作为一个复数，自由度是2）由一组共轭的动力学变量
+（quadractures）<span class="math inline">\(p(t)\)</span>,<span
+class="math inline">\(q(t)\)</span>确定。<span
+class="math inline">\(p\)</span>,<span
+class="math inline">\(q\)</span>可以是（实部，虚部）或者（模，相位），也就是说<span
+class="math inline">\(\mathscr{E}_l\)</span>和它的复共轭可以看作是<span
+class="math inline">\(p\)</span>,<span
+class="math inline">\(q\)</span>的某种组合（力学量），相当于通过正则变换联系。</p>
+<p>将解带回可以得到真空中色散关系<span
+class="math inline">\(\omega_l=ck_l\)</span>，横波条件<span
+class="math inline">\(\boldsymbol{\epsilon_l} \perp
+\boldsymbol{k_l}\)</span>，以及 <span class="math display">\[
+\boldsymbol{B}(\boldsymbol{r},t)=\sum_l\frac{
+\boldsymbol{k_l}\times\boldsymbol{\epsilon_l}}{\omega_l}
+\mathscr{E}_l(t)e^{i\boldsymbol{k_l}\cdot\boldsymbol{r}}+c.c
+\]</span> 出于简单以及直观的目的，下面首先讨论单模辐射的量子化。</p>
+<h2 id="单模辐射的量子化">1.2 单模辐射的量子化</h2>
+<p>由<span
+class="math inline">\(\mathscr{E}_l(t)=\mathscr{E}_l(0)e^{-i\omega_l
+t}\)</span>可以反推出<span
+class="math inline">\(\mathscr{E}_l\)</span>满足动力学方程 <span
+class="math display">\[
+\frac{d}{dt}\mathscr{E}_l(t)=-i\omega_l\mathscr{E}_l(t)
+\]</span> 为了与之后的规范一致，令<span
+class="math inline">\(\mathscr{E}_l(t)=i\mathscr{E}_l^{(1)}\alpha_l(t)\)</span>，其中<span
+class="math inline">\(\mathscr{E}_l^{(1)}\)</span>称为模式<span
+class="math inline">\(l\)</span>的单光子振幅为常数，之后会给出定义。</p>
+<p>于是<span
+class="math inline">\(\alpha_l\)</span>作为无量纲振幅，满足动力学方程
+<span class="math display">\[
+\frac{d}{dt}\alpha_l(t)=-i\omega_l\alpha_l(t)
+\]</span> 接下来令<span
+class="math inline">\(\alpha_l(t)=\frac{1}{\sqrt{2\hbar}}(Q_l+iP_l)\)</span>，或者反过来
+<span class="math display">\[
+\left\{\begin{array}{l}
+Q_{l}=\sqrt{\frac{\hbar}{2}}\left(\alpha_{l}(t)+\alpha_{l}^{*}(t)\right)
+\\
+P_{l}=-i
+\sqrt{\frac{\hbar}{2}}\left(\alpha_{l}(t)-\alpha_{l}^{*}(t)\right)
+\end{array}\right.
+\]</span> 这里的<span class="math inline">\(Q_l\)</span>和<span
+class="math inline">\(P_l\)</span>为一组正则变量，相当于从<span
+class="math inline">\(\alpha_l\)</span>,<span
+class="math inline">\(\alpha_{l}^{ * }\)</span>到<span
+class="math inline">\(Q_l\)</span>，<span
+class="math inline">\(P_l\)</span>的正则变换。</p>
+<p>我们可以先假定电磁场局域在体积<span
+class="math inline">\(V_l\)</span>中，系统的哈密顿量即为电磁场在体积<span
+class="math inline">\(V_l\)</span>中的能量 <span class="math display">\[
+\begin{align}
+  H_{l}&amp;=\frac{\varepsilon_{0}}{2} \int_{V_{l}} d^{3}
+r\left(\boldsymbol{E}^{2}+c^{2}
+\boldsymbol{B}^{2}\right)=\varepsilon_{0} \int_{V_{l}} d^{3} r
+\boldsymbol{E}^{2}\\&amp;=2 \varepsilon_{0}
+V_{l}\left|\mathscr{E}_l(t)\right|^{2}=2 \varepsilon_{0}
+V_{l}\left[\mathscr{E}_{l}^{(1)}\right]^{2}\left|\alpha_{l}(t)\right|^{2}
+\end{align}
+\]</span> 令<span class="math inline">\(2 \varepsilon_{0} V _
+{l}\left[\mathscr{E}_{l}^{(1)}\right]^{2}=\hbar\omega_l\)</span>，得到常数<span
+class="math inline">\(\mathscr{E}_l^{(1)}\)</span>的值 <span
+class="math display">\[
+\mathscr{E}_l^{(1)}=\sqrt{\frac{\hbar\omega_l}{2\varepsilon_0V_l}}
+\]</span> 于是系统哈密顿进一步写为 <span class="math display">\[
+H_{l}=\hbar
+\omega_{l}\left|\alpha_{l}(t)\right|^{2}=\frac{\omega_{l}}{2}\left(Q_{l}^{2}+P_{l}^{2}\right)
+\]</span></p>
+<p>可以类比谐振子的哈密顿量进行正则量子化，将<span
+class="math inline">\(Q_l\)</span>，<span
+class="math inline">\(P_l\)</span>变为算符<span
+class="math inline">\(\hat{Q_l}\)</span>，<span
+class="math inline">\(\hat{P_l}\)</span>，满足对易关系<span
+class="math inline">\(\left[\hat{Q_{l}}, \hat{P_{l}}\right]=i
+\hbar\)</span>，此时哈密顿量也作为算符 <span class="math display">\[
+H_{l}=\frac{\omega_{l}}{2}\left(\hat{Q}_{l}^{2}+\hat{P}_{l}^{2}\right)
+\]</span> 类似定义产生算符和湮灭算符 <span class="math display">\[
+\left\{\begin{array}{l}
+\hat{a}_{l}=\frac{1}{\sqrt{2 \hbar}}\left(\hat{Q}_{l}+i
+\hat{P}_{l}\right) \\
+\hat{a}_{l}^{\dagger}=\frac{1}{\sqrt{2 \hbar}}\left(\hat{Q}_{l}-i
+\hat{P}_{l}\right)
+\end{array}\right.
+\]</span> 它们满足对易关系<span class="math inline">\(\left[\hat{a}_{l},
+\hat{a}_{l}^{\dagger}\right]=1\)</span>，此时<span
+class="math inline">\(\hat{H}_{l}=\hbar
+\omega_{l}\left(\hat{a}_{l}^{\dagger}
+\hat{a}_{l}+\frac{1}{2}\right)\)</span>。</p>
+<p>我们发现只要将电场经典表达式中的<span
+class="math inline">\(\alpha_l\)</span>,<span
+class="math inline">\(\alpha_{l}^{ * }\)</span>用<span
+class="math inline">\(\hat{a}_{l}\)</span>, <span
+class="math inline">\(\hat{a}_{l}^{\dagger}\)</span>代换，就得到量子化后的电场算符
+<span class="math display">\[
+\boldsymbol{\hat{E}}(\boldsymbol{r})=i\boldsymbol{\epsilon_l}
+\mathscr{E}_l^{(1)}\hat{a_l}e^{i\boldsymbol{k_l}\cdot\boldsymbol{r}}+h.c
+\]</span> 同理有磁场算符 <span class="math display">\[
+\boldsymbol{\hat{B}}(\boldsymbol{r})=i\frac{
+\boldsymbol{k_l}\times\boldsymbol{\epsilon_l}}{\omega_l}  \mathscr{E}_l^{(1)}\hat{a_l}e^{i\boldsymbol{k_l}\cdot\boldsymbol{r}}+h.c
+\]</span></p>
+<h2 id="heisonberg表象">1.3 Heisonberg表象</h2>
+</div></article></div><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2023-07-18T03:42:52.628Z" title="2023/7/18 11:42:52">2023-07-18</time>发表</span><span class="level-item"><time dateTime="2023-07-18T03:42:52.628Z" title="2023/7/18 11:42:52">2023-07-18</time>更新</span><span class="level-item">1 分钟读完 (大约123个字)</span></div></div><p class="title is-3 is-size-4-mobile"><a class="link-muted" href="/2023/07/18/hello-world/">Hello World</a></p><div class="content"><p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+</div></article></div></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/avatar.png" alt="Your name"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Your name</p><p class="is-size-6 is-block">Your title</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Your location</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">0</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="https://github.com/ppoffice" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-12-14T01:50:26.723Z">2023-12-14</time></p><p class="title"><a href="/2023/12/14/%E8%87%AA%E5%AF%B9%E5%81%B6/"> </a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-18T06:54:04.000Z">2023-07-18</time></p><p class="title"><a href="/2023/07/18/%E9%87%8F%E5%AD%90%E5%85%89%E5%AD%A61-%E7%94%B5%E7%A3%81%E8%BE%90%E5%B0%84%E7%9A%84%E9%87%8F%E5%AD%90%E7%90%86%E8%AE%BA/">量子光学1 电磁辐射的量子理论</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-18T03:42:52.628Z">2023-07-18</time></p><p class="title"><a href="/2023/07/18/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><!--!--><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">订阅更新</h3><form action="https://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open(&#039;https://feedburner.google.com/fb/a/mailverify?uri=&#039;,&#039;popupwindow&#039;,&#039;scrollbars=yes,width=550,height=520&#039;);return true"><input type="hidden" value="" name="uri"><input type="hidden" name="loc" value="en_US"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div><div class="card widget"><div class="card-content"><div class="notification is-danger">You need to set <code>client_id</code> and <code>slot_id</code> to show this AD unit. Please set it in <code>_config.yml</code>.</div></div></div><div class="card widget" data-type="subscribe-email"><div class="card-content"><div class="menu"><h3 class="menu-label">follow.it</h3><form action="" method="post" target="_blank"><div class="field has-addons"><div class="control has-icons-left is-expanded"><input class="input" name="email" type="email" placeholder="Email"><span class="icon is-small is-left"><i class="fas fa-envelope"></i></span></div><div class="control"><input class="button" type="submit" value="订阅"></div></div></form></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.svg" alt="Azmuth&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2024 Azmuth</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p><p class="is-size-7">© 2019</p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
