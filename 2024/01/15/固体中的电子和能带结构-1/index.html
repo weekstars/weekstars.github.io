@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>固体中的电子和能带结构 1 - Azmuth&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="hex"><meta name="msapplication-TileImage" content="/images/head.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="hex"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Drude模型；一维紧束缚模型"><meta property="og:type" content="blog"><meta property="og:title" content="固体中的电子和能带结构 1"><meta property="og:url" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/"><meta property="og:site_name" content="Azmuth&#039;s blog"><meta property="og:description" content="Drude模型；一维紧束缚模型"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115155416389.png"><meta property="og:image" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115153000798.png"><meta property="og:image" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115180004488.png"><meta property="og:image" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115183856976.png"><meta property="article:published_time" content="2024-01-15T04:59:17.000Z"><meta property="article:modified_time" content="2024-01-15T11:26:21.600Z"><meta property="article:author" content="Azmuth"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115155416389.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/"},"headline":"固体中的电子和能带结构 1","image":["https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115155416389.png","https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115153000798.png","https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115180004488.png","https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115183856976.png"],"datePublished":"2024-01-15T04:59:17.000Z","dateModified":"2024-01-15T11:26:21.600Z","author":{"@type":"Person","name":"Azmuth"},"publisher":{"@type":"Organization","name":"Azmuth's blog","logo":{"@type":"ImageObject","url":"https://weekstars.github.io/images/logo.png"}},"description":"Drude模型；一维紧束缚模型"}</script><link rel="canonical" href="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/"><link rel="icon" href="/images/head.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>固体中的电子和能带结构 1 - Azmuth&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="hex"><meta name="msapplication-TileImage" content="/images/head.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="hex"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="Drude模型；一维紧束缚模型"><meta property="og:type" content="blog"><meta property="og:title" content="固体中的电子和能带结构 1"><meta property="og:url" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/"><meta property="og:site_name" content="Azmuth&#039;s blog"><meta property="og:description" content="Drude模型；一维紧束缚模型"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115155416389.png"><meta property="og:image" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115153000798.png"><meta property="og:image" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115180004488.png"><meta property="og:image" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115183856976.png"><meta property="article:published_time" content="2024-01-15T04:59:17.000Z"><meta property="article:modified_time" content="2024-01-15T11:28:42.739Z"><meta property="article:author" content="Azmuth"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115155416389.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/"},"headline":"固体中的电子和能带结构 1","image":["https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115155416389.png","https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115153000798.png","https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115180004488.png","https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/image-20240115183856976.png"],"datePublished":"2024-01-15T04:59:17.000Z","dateModified":"2024-01-15T11:28:42.739Z","author":{"@type":"Person","name":"Azmuth"},"publisher":{"@type":"Organization","name":"Azmuth's blog","logo":{"@type":"ImageObject","url":"https://weekstars.github.io/images/logo.png"}},"description":"Drude模型；一维紧束缚模型"}</script><link rel="canonical" href="https://weekstars.github.io/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/"><link rel="icon" href="/images/head.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
   (function () {
       function switchTab() {
           if (!location.hash) {
@@ -29,55 +29,146 @@
       switchTab();
       window.addEventListener('hashchange', switchTab, false);
   })();
-  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/logo.png" alt="Azmuth&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-01-15T04:59:17.000Z" title="2024/1/15 12:59:17">2024-01-15</time>发表</span><span class="level-item"><time dateTime="2024-01-15T11:26:21.600Z" title="2024/1/15 19:26:21">2024-01-15</time>更新</span><span class="level-item">9 分钟读完 (大约1395个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">固体中的电子和能带结构 1</h1><div class="content"><p>Drude模型；一维紧束缚模型<span id="more"></span></p>
-<h2 id="Drude模型"><a href="#Drude模型" class="headerlink" title="Drude模型"></a>Drude模型</h2><p>我们要研究的问题是如何给出材料电导率的物理描述。</p>
-<p>电导率取决于（1）电子质量$m_e$;(2)电子数密度$n_e$;(3)电子被杂质散射，杂质的直径$d$，杂质数密度为$n_i$。</p>
-<p>整体的物理图像是：电子在外电场$\boldsymbol{E}$驱动下加速，走过一个平均自由程$l$（经过弛豫时间$\tau$）后被杂质散射速度变为0，然后重新加速（这是一个简化的图像，更细致的分析可以参考kinetic theory）。</p>
-<p>平均自由程 $l\sim 1/n_id$</p>
-<p>弛豫时间 $\tau \sim l/v_{therm}$,这里的$v_{therm}$是电子热运动的平均速度（具体来说，把电子当作遵从玻尔兹曼分布的经典理想气体），近似有$K=\frac{1}{2} m_{e} v_{therm}^{2} \sim k_{B} T \rightarrow \tau \propto T^{-1 / 2}$</p>
-<p>电子的平均速度 $\boldsymbol{v}=\left\langle\boldsymbol{v}_{therm }\right\rangle=\frac{e \boldsymbol{E}}{m_{e}} \tau$</p>
-<p>电子运动导致的电流密度 $\boldsymbol{j}=en_{e}\boldsymbol{v}=\frac{e^{2}n_{e} \boldsymbol{E}\tau}{m_{e}}=\sigma\boldsymbol{E}$</p>
-<script type="math/tex; mode=display">
-\rightarrow\sigma=\frac{e^{2} n_{e} \tau}{m_{e}} \propto T^{-1 / 2}, \quad \rho=1 / \sigma \propto T^{1 / 2}</script><hr>
-<h3 id="和实验结果的对比"><a href="#和实验结果的对比" class="headerlink" title="和实验结果的对比"></a>和实验结果的对比</h3><p><img src="image-20240115155416389.png" alt="image-20240115155416389"></p>
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/logo.png" alt="Azmuth&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-01-15T04:59:17.000Z" title="2024/1/15 12:59:17">2024-01-15</time>发表</span><span class="level-item"><time dateTime="2024-01-15T11:28:42.739Z" title="2024/1/15 19:28:42">2024-01-15</time>更新</span><span class="level-item">9 分钟读完 (大约1395个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">固体中的电子和能带结构 1</h1><div class="content"><p>Drude模型；一维紧束缚模型<span id="more"></span></p>
+<h2 id="drude模型">Drude模型</h2>
+<p>我们要研究的问题是如何给出材料电导率的物理描述。</p>
+<p>电导率取决于（1）电子质量<span
+class="math inline">\(m_e\)</span>;(2)电子数密度<span
+class="math inline">\(n_e\)</span>;(3)电子被杂质散射，杂质的直径<span
+class="math inline">\(d\)</span>，杂质数密度为<span
+class="math inline">\(n_i\)</span>。</p>
+<p>整体的物理图像是：电子在外电场<span
+class="math inline">\(\boldsymbol{E}\)</span>驱动下加速，走过一个平均自由程<span
+class="math inline">\(l\)</span>（经过弛豫时间<span
+class="math inline">\(\tau\)</span>）后被杂质散射速度变为0，然后重新加速（这是一个简化的图像，更细致的分析可以参考kinetic
+theory）。</p>
+<p>平均自由程 <span class="math inline">\(l\sim 1/n_id\)</span></p>
+<p>弛豫时间 <span class="math inline">\(\tau \sim
+l/v_{therm}\)</span>,这里的<span
+class="math inline">\(v_{therm}\)</span>是电子热运动的平均速度（具体来说，把电子当作遵从玻尔兹曼分布的经典理想气体），近似有<span
+class="math inline">\(K=\frac{1}{2} m_{e} v_{therm}^{2} \sim k_{B} T
+\rightarrow \tau \propto T^{-1 / 2}\)</span></p>
+<p>电子的平均速度 <span
+class="math inline">\(\boldsymbol{v}=\left\langle\boldsymbol{v}_{therm
+}\right\rangle=\frac{e \boldsymbol{E}}{m_{e}} \tau\)</span></p>
+<p>电子运动导致的电流密度 <span
+class="math inline">\(\boldsymbol{j}=en_{e}\boldsymbol{v}=\frac{e^{2}n_{e}
+\boldsymbol{E}\tau}{m_{e}}=\sigma\boldsymbol{E}\)</span> <span
+class="math display">\[
+\rightarrow\sigma=\frac{e^{2} n_{e} \tau}{m_{e}} \propto T^{-1 / 2},
+\quad \rho=1 / \sigma \propto T^{1 / 2}
+\]</span></p>
+<hr />
+<h3 id="和实验结果的对比">和实验结果的对比</h3>
+<figure>
+<img src="image-20240115155416389.png" alt="image-20240115155416389" />
+<figcaption aria-hidden="true">image-20240115155416389</figcaption>
+</figure>
 <p>这是实验上测得的铜电阻率随温度的变化，其中RRR代表杂质的多少，RRR越小代表杂质越多。</p>
 <p>我们观察到在高温时Drude模型与实验结果吻合的很好，但在低温时电阻率近似为常数，而非Drude模型给出的趋近于零，另外，在Drude模型下根本不会存在绝缘体。</p>
 <p>这告诉我们经典的Drude模型并不能解释实验结果，需要引入量子力学。</p>
-<p><img src="image-20240115153000798.png" alt="image-20240115153000798"></p>
-<p>我们用量子力学的方法考虑一维的自由电子气体，结合周期性边界条件（或者叫箱归一化），它的波矢$k=\left(\frac{2 \pi}{L}\right) \times \text {int}$</p>
-<p>考虑$N$个电子，费米波矢$k_{F}=\frac{1}{2}\frac{2\pi}{L}\frac{N}{2}=\frac{\pi}{2}n_{1 D}\sim\frac{1}{\text { elec. separation}}$，电子的特征速度$v \sim v_{F}=\frac{\hbar k_{F}}{m_{e}^\ast}$，而不是经典Drude模型所给出的$v \sim \sqrt{k_{B} T / m_{e}^\ast}$</p>
-<p>值得注意的是，如果仔细考察费米分布$f_l=1/[exp(\frac{\epsilon_l-\mu}{k_BT})+1]$，上述“填充”的物理图像描述的是低温($E_F\gg  k_BT$)的情形，此时必须要用量子力学处理，而在高温（$E_F\ll  k_BT$）是，费米分布退化为玻尔兹曼分布，用经典模型处理即可，这也难怪上面的实验结果在高温区吻合的较好。</p>
-<p>事实上，$E_F\sim 10^4K$，所以在一般室温都处于低温区域，必须用量子力学处理。</p>
-<h2 id="一维紧束缚模型"><a href="#一维紧束缚模型" class="headerlink" title="一维紧束缚模型"></a>一维紧束缚模型</h2><p>以上我们考虑的是自由电子，还无法解释为什么会存在绝缘体，接下来我们考虑周期势中的电子。</p>
-<p><img src="image-20240115180004488.png" alt="image-20240115180004488"></p>
-<p>假设$|n\rangle$代表第$n$个核处的轨道并且它们正交，所有的$|n\rangle$展成整个系统的希尔伯特空间</p>
-<p>一个电子的态可以写为$|\psi\rangle=\sum_{n=1}^{N} \psi(n)\left|n\right\rangle$</p>
-<p>系统的哈密顿量用矩阵元写为$H_{m n}=V_{n} \delta_{m n}-t^{+} \delta_{m, n+1}-t^{-} \delta_{m, n-1}, \quad t^{+}=\left(t^{-}\right)^{*}=t \mathrm{e}^{\mathrm{i} \phi}$</p>
-<p>其中$V_{n}$代表电子处在第$n$个核处的势能，$t^{+}$代表从第$n$个核处到第$(n+1)$个核处的hopping，$t^{-}$代表从第$n$个核处到第$(n-1)$个核处的hopping，哈密顿是厄密的要求$t^+,t^-$互为复共轭。</p>
-<hr>
-<h3 id="hopping的物理意义"><a href="#hopping的物理意义" class="headerlink" title="hopping的物理意义"></a>hopping的物理意义</h3><p>假设$t=0$是电子处在$|n\rangle$，时间演化$\Delta t$,电子处在$|1\rangle$的概率幅为</p>
-<script type="math/tex; mode=display">
-\left\langle 1\left|e^{-\frac{i H \Delta t}{\hbar}}\right| 0\right\rangle \approx\left\langle 1\left|1-\frac{i H\Delta t}{\hbar}\right| 0\right\rangle=-\frac{i \Delta t}{\hbar}\left\langle1 \mid H \mid0\right\rangle=\frac{i \Delta t t^{+}}{\hbar}</script><p>可见$t^{+}$代表从第$n$个核处到第$(n+1)$个核处的hopping的强度。</p>
-<hr>
-<p>接下来，我们要求解这个哈密顿量的本征能量和本征态，即</p>
-<script type="math/tex; mode=display">
-\sum_{n} H_{m n} \psi(n)=\epsilon \psi(m)</script><p>对于一般的$V_n$不好求解，假设对于所有的$n$,$V_n=V$，这种具有平移对称性的情况有平面波ansatz</p>
-<script type="math/tex; mode=display">
-\psi_{k}(n)=\mathrm{e}^{\mathrm{i} k x_{n}}=\mathrm{e}^{\mathrm{i} k n a}</script><p>代入本征方程得到</p>
-<script type="math/tex; mode=display">
+<figure>
+<img src="image-20240115153000798.png" alt="image-20240115153000798" />
+<figcaption aria-hidden="true">image-20240115153000798</figcaption>
+</figure>
+<p>我们用量子力学的方法考虑一维的自由电子气体，结合周期性边界条件（或者叫箱归一化），它的波矢<span
+class="math inline">\(k=\left(\frac{2 \pi}{L}\right) \times \text
+{int}\)</span></p>
+<p>考虑<span class="math inline">\(N\)</span>个电子，费米波矢<span
+class="math inline">\(k_{F}=\frac{1}{2}\frac{2\pi}{L}\frac{N}{2}=\frac{\pi}{2}n_{1
+D}\sim\frac{1}{\text { elec. separation}}\)</span>，电子的特征速度<span
+class="math inline">\(v \sim v_{F}=\frac{\hbar
+k_{F}}{m_{e}^\ast}\)</span>，而不是经典Drude模型所给出的<span
+class="math inline">\(v \sim \sqrt{k_{B} T / m_{e}^\ast}\)</span></p>
+<p>值得注意的是，如果仔细考察费米分布<span
+class="math inline">\(f_l=1/[exp(\frac{\epsilon_l-\mu}{k_BT})+1]\)</span>，上述“填充”的物理图像描述的是低温(<span
+class="math inline">\(E_F\gg
+k_BT\)</span>)的情形，此时必须要用量子力学处理，而在高温（<span
+class="math inline">\(E_F\ll
+k_BT\)</span>）是，费米分布退化为玻尔兹曼分布，用经典模型处理即可，这也难怪上面的实验结果在高温区吻合的较好。</p>
+<p>事实上，<span class="math inline">\(E_F\sim
+10^4K\)</span>，所以在一般室温都处于低温区域，必须用量子力学处理。</p>
+<h2 id="一维紧束缚模型">一维紧束缚模型</h2>
+<p>以上我们考虑的是自由电子，还无法解释为什么会存在绝缘体，接下来我们考虑周期势中的电子。</p>
+<figure>
+<img src="image-20240115180004488.png" alt="image-20240115180004488" />
+<figcaption aria-hidden="true">image-20240115180004488</figcaption>
+</figure>
+<p>假设<span class="math inline">\(|n\rangle\)</span>代表第<span
+class="math inline">\(n\)</span>个核处的轨道并且它们正交，所有的<span
+class="math inline">\(|n\rangle\)</span>展成整个系统的希尔伯特空间</p>
+<p>一个电子的态可以写为<span
+class="math inline">\(|\psi\rangle=\sum_{n=1}^{N}
+\psi(n)\left|n\right\rangle\)</span></p>
+<p>系统的哈密顿量用矩阵元写为<span class="math inline">\(H_{m n}=V_{n}
+\delta_{m n}-t^{+} \delta_{m, n+1}-t^{-} \delta_{m, n-1}, \quad
+t^{+}=\left(t^{-}\right)^{*}=t \mathrm{e}^{\mathrm{i} \phi}\)</span></p>
+<p>其中<span class="math inline">\(V_{n}\)</span>代表电子处在第<span
+class="math inline">\(n\)</span>个核处的势能，<span
+class="math inline">\(t^{+}\)</span>代表从第<span
+class="math inline">\(n\)</span>个核处到第<span
+class="math inline">\((n+1)\)</span>个核处的hopping，<span
+class="math inline">\(t^{-}\)</span>代表从第<span
+class="math inline">\(n\)</span>个核处到第<span
+class="math inline">\((n-1)\)</span>个核处的hopping，哈密顿是厄密的要求<span
+class="math inline">\(t^+,t^-\)</span>互为复共轭。</p>
+<hr />
+<h3 id="hopping的物理意义">hopping的物理意义</h3>
+<p>假设<span class="math inline">\(t=0\)</span>是电子处在<span
+class="math inline">\(|n\rangle\)</span>，时间演化<span
+class="math inline">\(\Delta t\)</span>,电子处在<span
+class="math inline">\(|1\rangle\)</span>的概率幅为 <span
+class="math display">\[
+\left\langle 1\left|e^{-\frac{i H \Delta t}{\hbar}}\right|
+0\right\rangle \approx\left\langle 1\left|1-\frac{i H\Delta
+t}{\hbar}\right| 0\right\rangle=-\frac{i \Delta t}{\hbar}\left\langle1
+\mid H \mid0\right\rangle=\frac{i \Delta t t^{+}}{\hbar}
+\]</span> 可见<span class="math inline">\(t^{+}\)</span>代表从第<span
+class="math inline">\(n\)</span>个核处到第<span
+class="math inline">\((n+1)\)</span>个核处的hopping的强度。</p>
+<hr />
+<p>接下来，我们要求解这个哈密顿量的本征能量和本征态，即 <span
+class="math display">\[
+\sum_{n} H_{m n} \psi(n)=\epsilon \psi(m)
+\]</span> 对于一般的<span
+class="math inline">\(V_n\)</span>不好求解，假设对于所有的<span
+class="math inline">\(n\)</span>,<span
+class="math inline">\(V_n=V\)</span>，这种具有平移对称性的情况有平面波ansatz
+<span class="math display">\[
+\psi_{k}(n)=\mathrm{e}^{\mathrm{i} k x_{n}}=\mathrm{e}^{\mathrm{i} k n
+a}
+\]</span> 代入本征方程得到 <span class="math display">\[
 \begin{aligned}
-\sum_{n} H_{m n} \psi_{k}(n) & =V \mathrm{e}^{\mathrm{i} k m a}-t^{+} \mathrm{e}^{\mathrm{i} k(m-1) a}-t^{-} \mathrm{e}^{\mathrm{i} k(m+1) a} \\
-& =\left(V-t^{+} \mathrm{e}^{-\mathrm{i} k a}-t^{-} \mathrm{e}^{\mathrm{i} k a}\right) \mathrm{e}^{\mathrm{i} k m a}=\epsilon_{k} \psi_{k}(m)
-\end{aligned}</script><p>其中本征能量$\epsilon_{k}=-2 t \cos (k a-\phi)+V$</p>
-<hr>
-<h3 id="有效质量"><a href="#有效质量" class="headerlink" title="有效质量"></a>有效质量</h3><p>假设$\phi=0$,或者$t^+$是实数，对于小的波矢$k$，利用泰勒展开，有</p>
-<script type="math/tex; mode=display">
-\epsilon_{k}=t a^{2} k^{2}+V=\frac{t a^{2}}{\hbar^{2}} p^{2}+V=\frac{1}{2 m} p^{2}+V</script><p>可见当$k$很小时这个色散关系就是自由粒子色散关系的形式，引入有效质量$m=\frac{\hbar^{2}}{2 t a^{2}}$</p>
+\sum_{n} H_{m n} \psi_{k}(n) &amp; =V \mathrm{e}^{\mathrm{i} k m
+a}-t^{+} \mathrm{e}^{\mathrm{i} k(m-1) a}-t^{-} \mathrm{e}^{\mathrm{i}
+k(m+1) a} \\
+&amp; =\left(V-t^{+} \mathrm{e}^{-\mathrm{i} k a}-t^{-}
+\mathrm{e}^{\mathrm{i} k a}\right) \mathrm{e}^{\mathrm{i} k m
+a}=\epsilon_{k} \psi_{k}(m)
+\end{aligned}
+\]</span> 其中本征能量<span class="math inline">\(\epsilon_{k}=-2 t \cos
+(k a-\phi)+V\)</span></p>
+<hr />
+<h3 id="有效质量">有效质量</h3>
+<p>假设<span class="math inline">\(\phi=0\)</span>,或者<span
+class="math inline">\(t^+\)</span>是实数，对于小的波矢<span
+class="math inline">\(k\)</span>，利用泰勒展开，有 <span
+class="math display">\[
+\epsilon_{k}=t a^{2} k^{2}+V=\frac{t a^{2}}{\hbar^{2}}
+p^{2}+V=\frac{1}{2 m} p^{2}+V
+\]</span> 可见当<span
+class="math inline">\(k\)</span>很小时这个色散关系就是自由粒子色散关系的形式，引入有效质量<span
+class="math inline">\(m=\frac{\hbar^{2}}{2 t a^{2}}\)</span></p>
 <p>于是在讨论电子的dynamics时，就可以直接把Drude模型里的电子质量替换为有效质量</p>
-<hr>
-<p>由于$k \sim k+\frac{2 \pi}{a}$,限制$k$在第一布里渊区取值。</p>
-<p><img src="image-20240115183856976.png" alt="image-20240115183856976"></p>
-</div><div class="article-licensing box"><div class="licensing-title"><p>固体中的电子和能带结构 1</p><p><a href="https://weekstars.github.io/2024/01/15/固体中的电子和能带结构-1/">https://weekstars.github.io/2024/01/15/固体中的电子和能带结构-1/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Azmuth</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-01-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-01-15</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/07/18/hello-world/"><span class="level-item">Hello World</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/OIP.png" alt="Azmuth"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Azmuth</p><p class="is-size-6 is-block">Have a perfect day!</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">1</p></a></div></div></nav></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#Drude模型"><span class="level-left"><span class="level-item">1</span><span class="level-item">Drude模型</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#和实验结果的对比"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">和实验结果的对比</span></span></a></li></ul></li><li><a class="level is-mobile" href="#一维紧束缚模型"><span class="level-left"><span class="level-item">2</span><span class="level-item">一维紧束缚模型</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#hopping的物理意义"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">hopping的物理意义</span></span></a></li><li><a class="level is-mobile" href="#有效质量"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">有效质量</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-15T04:59:17.000Z">2024-01-15</time></p><p class="title"><a href="/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/">固体中的电子和能带结构 1</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-18T03:42:52.628Z">2023-07-18</time></p><p class="title"><a href="/2023/07/18/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/"><span class="level-start"><span class="level-item">2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/logo.png" alt="Azmuth&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2024 Azmuth</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+<hr />
+<p>由于<span class="math inline">\(k \sim k+\frac{2
+\pi}{a}\)</span>,限制<span
+class="math inline">\(k\)</span>在第一布里渊区取值。</p>
+<figure>
+<img src="image-20240115183856976.png" alt="image-20240115183856976" />
+<figcaption aria-hidden="true">image-20240115183856976</figcaption>
+</figure>
+</div><div class="article-licensing box"><div class="licensing-title"><p>固体中的电子和能带结构 1</p><p><a href="https://weekstars.github.io/2024/01/15/固体中的电子和能带结构-1/">https://weekstars.github.io/2024/01/15/固体中的电子和能带结构-1/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Azmuth</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-01-15</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-01-15</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2023/07/18/hello-world/"><span class="level-item">Hello World</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/OIP.png" alt="Azmuth"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Azmuth</p><p class="is-size-6 is-block">Have a perfect day!</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">2</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">1</p></a></div></div></nav></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#drude模型"><span class="level-left"><span class="level-item">1</span><span class="level-item">Drude模型</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#和实验结果的对比"><span class="level-left"><span class="level-item">1.1</span><span class="level-item">和实验结果的对比</span></span></a></li></ul></li><li><a class="level is-mobile" href="#一维紧束缚模型"><span class="level-left"><span class="level-item">2</span><span class="level-item">一维紧束缚模型</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#hopping的物理意义"><span class="level-left"><span class="level-item">2.1</span><span class="level-item">hopping的物理意义</span></span></a></li><li><a class="level is-mobile" href="#有效质量"><span class="level-left"><span class="level-item">2.2</span><span class="level-item">有效质量</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-15T04:59:17.000Z">2024-01-15</time></p><p class="title"><a href="/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/">固体中的电子和能带结构 1</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-18T03:42:52.628Z">2023-07-18</time></p><p class="title"><a href="/2023/07/18/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/"><span class="level-start"><span class="level-item">2024</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">1</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/logo.png" alt="Azmuth&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2024 Azmuth</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
             article: {
                 highlight: {
                     clipboard: true,
