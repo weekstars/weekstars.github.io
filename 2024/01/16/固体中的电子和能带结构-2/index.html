@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>固体中的电子和能带结构 2 - Azmuth&#039;s blog</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="hex"><meta name="msapplication-TileImage" content="/images/head.png"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="hex"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta name="description" content="电子在1D晶格中dynamics的半经典图像;金属和绝缘体;3D晶格中的能带"><meta property="og:type" content="blog"><meta property="og:title" content="固体中的电子和能带结构 2"><meta property="og:url" content="https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/"><meta property="og:site_name" content="Azmuth&#039;s blog"><meta property="og:description" content="电子在1D晶格中dynamics的半经典图像;金属和绝缘体;3D晶格中的能带"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/image-20240116220321574.png"><meta property="og:image" content="https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/image-20240117105933672.png"><meta property="og:image" content="https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/image-20240117110835560.png"><meta property="article:published_time" content="2024-01-16T12:36:17.000Z"><meta property="article:modified_time" content="2024-01-17T03:31:28.980Z"><meta property="article:author" content="Azmuth"><meta property="article:tag" content="固体物理"><meta property="twitter:card" content="summary"><meta property="twitter:image:src" content="https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/image-20240116220321574.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/"},"headline":"固体中的电子和能带结构 2","image":["https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/image-20240116220321574.png","https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/image-20240117105933672.png","https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/image-20240117110835560.png"],"datePublished":"2024-01-16T12:36:17.000Z","dateModified":"2024-01-17T03:31:28.980Z","author":{"@type":"Person","name":"Azmuth"},"publisher":{"@type":"Organization","name":"Azmuth's blog","logo":{"@type":"ImageObject","url":"https://weekstars.github.io/images/logo.png"}},"description":"电子在1D晶格中dynamics的半经典图像;金属和绝缘体;3D晶格中的能带"}</script><link rel="canonical" href="https://weekstars.github.io/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/"><link rel="icon" href="/images/head.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+
+          const id = '#' + CSS.escape(location.hash.substring(1));
+          const $tabMenu = document.querySelector(`.tabs a[href="${id}"]`);
+          if (!$tabMenu) {
+            return;
+          }
+
+          const $tabMenuContainer = $tabMenu.parentElement.parentElement;
+          Array.from($tabMenuContainer.children).forEach($menu => $menu.classList.remove('is-active'));
+          Array.from($tabMenuContainer.querySelectorAll('a'))
+              .map($menu => document.getElementById($menu.getAttribute("href").substring(1)))
+              .forEach($content => $content.classList.add('is-hidden'));
+
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+          const $activeTab = document.querySelector(id);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container navbar-container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/images/logo.png" alt="Azmuth&#039;s blog" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/tags">Tags</a></div><div class="navbar-end"><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2024-01-16T12:36:17.000Z" title="2024/1/16 20:36:17">2024-01-16</time>发表</span><span class="level-item"><time dateTime="2024-01-17T03:31:28.980Z" title="2024/1/17 11:31:28">2024-01-17</time>更新</span><span class="level-item">8 分钟读完 (大约1265个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">固体中的电子和能带结构 2</h1><div class="content"><p>电子在1D晶格中dynamics的半经典图像;金属和绝缘体;3D晶格中的能带<span id="more"></span></p>
+<h2
+id="电子在1d晶格中dynamics的半经典图像">电子在1D晶格中dynamics的半经典图像</h2>
+<p>考虑一个波包态<span class="math inline">\(\psi_{p,
+x}(n)=\mathrm{e}^{-(n a-x)^{2} / 2 \Delta x^{2}} \mathrm{e}^{\mathrm{i}
+\frac{p}{\hbar} n a}\)</span>，解释为一个坐标为<span
+class="math inline">\(x\)</span>，动量为<span
+class="math inline">\(p\)</span>的电子，坐标的不确定度为<span
+class="math inline">\(\Delta x\)</span>，动量的不确定度<span
+class="math inline">\(\Delta p \sim \hbar/\Delta x\)</span></p>
+<p>如果<span class="math inline">\(\Delta x\)</span>和<span
+class="math inline">\(\Delta
+p\)</span>都很小，则哈密顿量的期望值可以近似为<span
+class="math inline">\(H(p, x)=\left\langle\psi_{p, x}|\hat{H}| \psi_{p,
+x}\right\rangle \approx-2 t \cos \left(\frac{p}{\hbar}
+a\right)+V(x)\)</span></p>
+<p>动力学方程为<span
+class="math inline">\(\dot{x}=\partial_{t}\langle\hat{x}\rangle=\partial_{p}
+H(p, x), \dot{p}=\partial_{t}\langle\hat{p}\rangle=-\partial_{x} H(p,
+x)\)</span></p>
+<p>把哈密顿量代入得到<span class="math inline">\(\dot{x}=\left.\frac{2
+\text { ta }}{\hbar} \sin \left(\frac{p}{\hbar} a\right)
+\approx\right|_{\text {for small } p} \frac{2 \text { ta
+}^{2}}{\hbar^{2}} p=m^{-1} p, \quad \dot{p}=-\partial_{x}
+V(x)=F\)</span></p>
+<p>我们发现<span class="math inline">\(\dot{p}=F\)</span>，但<span
+class="math inline">\(p=m\dot{x}\)</span>仅对很小的<span
+class="math inline">\(p\)</span>成立，这里可以类比群速度和相速度。</p>
+<p>解这个微分方程得到<span class="math inline">\(p(t)=F t, \quad
+v(t)=\frac{2 t_{\text {hop }}}{\hbar} \sin \left(\frac{F t}{\hbar}
+a\right) , \quad x(t)=\frac{2 t_{\text {hop }}}{F}\left[1-\cos
+\left(\frac{F t}{\hbar} a\right)\right]\)</span></p>
+<p>我们发现在恒力（例如外加电场）作用下电子的速度在做振荡，违背了经典牛顿定律下的物理图像。</p>
+<figure>
+<img src="image-20240116220321574.png" alt="image-20240116220321574" />
+<figcaption aria-hidden="true">image-20240116220321574</figcaption>
+</figure>
+<p>我们用<span
+class="math inline">\(v=\partial_{p}\epsilon_k\)</span>来分析上图，由于<span
+class="math inline">\(p(t)=F
+t\)</span>，电子在能带上坡往右跑，速度为正，然后下坡往右跑，速度为负，与先前的振荡相吻合。可是这样的周期运动如何得到稳恒电流呢？</p>
+<p>每经过弛豫时间<span
+class="math inline">\(\tau\)</span>，电子的波矢就会由于和杂质的散射重新排列为对称的分布，这和Drude模型中的经典图像极为类似，所以得到稳恒电流。如果想要观察到振荡的现象，需要让振荡周期远小于弛豫时间，即需要极少的杂质和很大的外电场。</p>
+<h2 id="金属和绝缘体">金属和绝缘体</h2>
+<p>能带填满=绝缘体（需要<span
+class="math inline">\(2N\)</span>个电子，对于<span
+class="math inline">\(N\)</span>个site）</p>
+<p>能带部分填满=金属（少于<span
+class="math inline">\(2N\)</span>个电子，对于<span
+class="math inline">\(N\)</span>个site）</p>
+<figure>
+<img src="image-20240117105933672.png" alt="image-20240117105933672" />
+<figcaption aria-hidden="true">image-20240117105933672</figcaption>
+</figure>
+<p>我们通过current carried by Fermi sea in a band来解释上面的结论。</p>
+<p>电流密度<span class="math inline">\(j=e\langle v\rangle n_{1
+D}\)</span></p>
+<p>其中平均速度 <span class="math display">\[
+\langle v\rangle=\frac{1}{k_{F}-k_{F}^{\prime}}
+\int_{k_{F}^{\prime}}^{k_{F}} \mathrm{~d} k
+v_{k}=\frac{1}{k_{F}-k_{F}^{\prime}} \int_{k_{F}^{\prime}}^{k_{F}}
+\mathrm{~d} k \frac{\mathrm{d} \epsilon_{k}}{\mathrm{~d}
+k}=\frac{E_{F}-E_{F}^{\prime}}{p_{F}-p_{F}^{\prime}}
+\]</span> 对于填满的能带，不论能带的形状如何，总有<span
+class="math inline">\(E_{F}=E_{F}^{\prime}\)</span>，因此电流总是0，为绝缘体。</p>
+<p>对于部分填满的能带，在外加电场作用下，<span
+class="math inline">\(\langle p\rangle\)</span>移动<span
+class="math inline">\(\Delta p=F \tau\)</span>，这使得<span
+class="math inline">\(E_{F}-E_{F}^{\prime} \neq 0\)</span>，即<span
+class="math inline">\(\langle v\rangle \neq 0\)</span>，为金属。</p>
+<h2 id="d晶格中的能带">3D晶格中的能带</h2>
+<figure>
+<img src="image-20240117110835560.png" alt="image-20240117110835560" />
+<figcaption aria-hidden="true">image-20240117110835560</figcaption>
+</figure>
+<p>考虑simple cubic lattice的tight binding model，哈密顿量可以写为 <span
+class="math display">\[
+H_{\boldsymbol{j}, \boldsymbol{i}}=-t_{x} \delta_{\boldsymbol{j},
+\boldsymbol{i}+\boldsymbol{x}}-t_{x}^{*} \delta_{\boldsymbol{j},
+\boldsymbol{i}-\boldsymbol{x}}-t_{y} \delta_{\boldsymbol{j},
+\boldsymbol{i}+\boldsymbol{y}}-t_{y}^{*} \delta_{\boldsymbol{j},
+\boldsymbol{i}-\boldsymbol{y}}-t_{z} \delta_{\boldsymbol{j},
+\boldsymbol{i}+\boldsymbol{z}}-t_{z}^{*} \delta_{\boldsymbol{j},
+\boldsymbol{i}-\boldsymbol{z}}
+\]</span> 这里的<span
+class="math inline">\(\boldsymbol{j},\boldsymbol{i}\)</span>是矢量，标记某个site的位置<span
+class="math inline">\(\boldsymbol{x}=a\hat{x}\)</span>，<span
+class="math inline">\(a\)</span>是晶格常数，<span
+class="math inline">\(\hat{x}\)</span>是<span
+class="math inline">\(x\)</span>方向单位矢量、</p>
+<p>本征态仍为平面波<span class="math inline">\(\mathrm{e}^{\mathrm{i}
+\boldsymbol{k} \cdot \boldsymbol{x}}\)</span>，其中<span
+class="math inline">\(\boldsymbol{k}\)</span>在3D布里渊区中取值</p>
+<p>本征能量<span class="math inline">\(\epsilon_{\boldsymbol{k}}=-2
+t_{x} \cos \left(k_{x} a\right)-2 t_{y} \cos \left(k_{y} a\right)-2
+t_{z} \cos \left(k_{z} a\right), \quad t_{x}, t_{y}, t_{z}=\text { real
+}\)</span></p>
+<h3 id="修正的牛顿定律">修正的牛顿定律</h3>
+<p>我们仿照1D能带的处理，仍然希望在小的<span
+class="math inline">\(k\)</span>下得到牛顿定律，但这时会发现1D下的标量质量会变成一个<span
+class="math inline">\(3\times3\)</span>的质量矩阵，这意味着质量存在各项异性，例如施加<span
+class="math inline">\(x\)</span>方向的电场会让电子获得<span
+class="math inline">\(y\)</span>方向的速度。</p>
+<p>假设能带的最低点位于<span
+class="math inline">\(\boldsymbol{k_{0}}\)</span>,在<span
+class="math inline">\(\boldsymbol{k_{0}}\)</span>附近对色散关系做泰勒展开有
+<span class="math display">\[
+\epsilon_{\boldsymbol{k}}=\epsilon_{\boldsymbol{k}_{0}}+\frac{1}{2}
+\delta p_{a} C_{a b} \delta p_{b}+\cdots, \quad \delta \boldsymbol{p}
+\equiv \hbar\left(\boldsymbol{k}-\boldsymbol{k}_{0}\right)
+\]</span>
+一次项为0因为在最低点，二次项是一个二次型（默认爱因斯坦求和）</p>
+<p><span class="math inline">\(C^{-1}=M\)</span>为质量矩阵</p>
+<p>代入哈密顿正则方程，得到修正的牛顿定律为 <span
+class="math display">\[
+\partial_{t} x_{a}=\sum_{b}\left(M^{-1}\right)_{a b} \delta p_{b}, \quad
+\partial_{t} \delta p_{a}=F_{a} \quad \rightarrow \quad
+\ddot{x}_{a}=\sum_{b}\left(M^{-1}\right)_{a b} F_{b} .
+\]</span> 写成更紧凑的矢量形式 <span class="math display">\[
+\partial_{t} \boldsymbol{x}=M^{-1} \delta \boldsymbol{p}, \quad
+\partial_{t} \delta \boldsymbol{p}=\boldsymbol{F} \quad \rightarrow
+\quad \ddot{\boldsymbol{x}}=M^{-1} \boldsymbol{F} .
+\]</span></p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>固体中的电子和能带结构 2</p><p><a href="https://weekstars.github.io/2024/01/16/固体中的电子和能带结构-2/">https://weekstars.github.io/2024/01/16/固体中的电子和能带结构-2/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Azmuth</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2024-01-16</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2024-01-17</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/">固体物理</a></div><!--!--></article></div><div class="card"><div class="card-content"><h3 class="menu-label has-text-centered">喜欢这篇文章？打赏一下作者吧</h3><div class="buttons is-centered"><a class="button donate" data-type="alipay"><span class="icon is-small"><i class="fab fa-alipay"></i></span><span>支付宝</span><span class="qrcode"><img src="/" alt="支付宝"></span></a><a class="button donate" data-type="wechat"><span class="icon is-small"><i class="fab fa-weixin"></i></span><span>微信</span><span class="qrcode"><img src="/" alt="微信"></span></a></div></div></div><nav class="post-navigation mt-4 level is-mobile"><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/"><span class="level-item">固体中的电子和能带结构 1</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-4-widescreen  order-1 is-sticky"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar is-rounded" src="/images/OIP.png" alt="Azmuth"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">Azmuth</p><p class="is-size-6 is-block">Have a perfect day!</p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">0</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">1</p></a></div></div></nav></div></div><div class="card widget" id="toc" data-type="toc"><div class="card-content"><div class="menu"><h3 class="menu-label">目录</h3><ul class="menu-list"><li><a class="level is-mobile" href="#电子在1d晶格中dynamics的半经典图像"><span class="level-left"><span class="level-item">1</span><span class="level-item">电子在1D晶格中dynamics的半经典图像</span></span></a></li><li><a class="level is-mobile" href="#金属和绝缘体"><span class="level-left"><span class="level-item">2</span><span class="level-item">金属和绝缘体</span></span></a></li><li><a class="level is-mobile" href="#d晶格中的能带"><span class="level-left"><span class="level-item">3</span><span class="level-item">3D晶格中的能带</span></span></a><ul class="menu-list"><li><a class="level is-mobile" href="#修正的牛顿定律"><span class="level-left"><span class="level-item">3.1</span><span class="level-item">修正的牛顿定律</span></span></a></li></ul></li></ul></div></div><style>#toc .menu-list > li > a.is-active + .menu-list { display: block; }#toc .menu-list > li > a + .menu-list { display: none; }</style><script src="/js/toc.js" defer></script></div><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-16T12:36:17.000Z">2024-01-16</time></p><p class="title"><a href="/2024/01/16/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-2/">固体中的电子和能带结构 2</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2024-01-15T04:59:17.000Z">2024-01-15</time></p><p class="title"><a href="/2024/01/15/%E5%9B%BA%E4%BD%93%E4%B8%AD%E7%9A%84%E7%94%B5%E5%AD%90%E5%92%8C%E8%83%BD%E5%B8%A6%E7%BB%93%E6%9E%84-1/">固体中的电子和能带结构 1</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2023-07-18T03:42:52.628Z">2023-07-18</time></p><p class="title"><a href="/2023/07/18/hello-world/">Hello World</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2024/"><span class="level-start"><span class="level-item">2024</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2023/"><span class="level-start"><span class="level-item">2023</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/%E5%9B%BA%E4%BD%93%E7%89%A9%E7%90%86/"><span class="tag">固体物理</span><span class="tag">2</span></a></div></div></div></div></div></div><!--!--></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/images/logo.png" alt="Azmuth&#039;s blog" height="28"></a><p class="is-size-7"><span>&copy; 2024 Azmuth</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-cn");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><script type="text/x-mathjax-config">MathJax.Hub.Config({
+            'HTML-CSS': {
+                matchFontHeight: false
+            },
+            SVG: {
+                matchFontHeight: false
+            },
+            CommonHTML: {
+                matchFontHeight: false
+            },
+            tex2jax: {
+                inlineMath: [
+                    ['$','$'],
+                    ['\\(','\\)']
+                ]
+            }
+        });</script><script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.9/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
